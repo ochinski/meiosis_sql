@@ -16,17 +16,21 @@ var character = {
 			age: 29,
 			weight: 245,
 			level: 12,
-			sex: "M",
+			gender: "M",
 			harcoreMode : false,
 		}
 	},
 	actions: function(update) {
 		return {
 				changeName: function(value) {
-					update({ character: PS({ name: value }) });
+					update({ 
+						character: PS({ name: value }) 
+					});
 				},
 				changeRace: function(value) {
-					update({ character: PS({ race: value }) });
+					update({
+						 character: PS({ race: value })
+					});
 				},
 				changeClass: function(value) {
 					update({ 
@@ -34,20 +38,26 @@ var character = {
 					});
 				},
 				changeAge: function(value) {
-					update({ character: PS({ age: value }) });
+					update({ 
+						character: PS({ age: value }) 
+					});
 				},
 				changeWeight: function(value) {
-					update({ character: PS({ weight: value }) });
+					update({ 
+						character: PS({ weight: value }) 
+					});
 				},
 				changeLevel: function(value) {
-					update({ character: PS({ level: value }) });
+					update({ 
+						character: PS({ level: value }) 
+					});
 				},
 				toggleGender: function(id) {
 					update({
 						[id]: S(state => {
 							var value = state.value;
-							var newGender = state.sex === "M" ? "F" : "M";
-							state.sex = newGender;
+							var newGender = state.gender === "M" ? "F" : "M";
+							state.gender = newGender;
 							return state;
 						})
 					});
@@ -63,10 +73,14 @@ var character = {
 					});
 				},
 				incrementAge: function(id, amount) {
-					update({ [id]: PS({ age: S(x => x + amount) }) });
+					update({ 
+						[id]: PS({ age: S(x => x + amount) }) 
+					});
 				},
 				incrementWeight: function(id, amount) {
-					update({ [id]: PS({ weight: S(x => x + amount) }) });
+					update({ 
+						[id]: PS({ weight: S(x => x + amount) }) 
+					});
 				},
 				incrementLevel: function(id, amount) {
 					update({ [id]: PS({ level: S(x => x + amount) }) });
@@ -134,11 +148,8 @@ var app = {
 		var state = this.state;
 		var { actions } = this.props;
 		var Characters = [];
-		Object.keys(state).forEach(function(key) {
-			var value = state[key];
-			Characters.push( <Character state={state} id={value.name} actions={actions}/> ); 
-		});
-		return (<div className="container">
+
+		return (<div className="customContainer">
 			<div className="wrapper">
 			
 				<div className="character_container">
@@ -149,7 +160,12 @@ var app = {
 				<h1 className="blue-text">to send</h1>
 					<pre>{JSON.stringify(state, null, 4)}</pre>
 				</div>
+				<div className="sqlSidebar">
+				<h1>to sql</h1>
+				sql stuff
+				</div>
 			</div>
+			
 		</div>);
 		}
 }

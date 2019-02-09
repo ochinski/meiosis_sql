@@ -19,13 +19,19 @@ h1 {
     margin: 0 auto;
     /* justify-content: center; */
     /* align-content: center; */
-    width: 70%;
+    /* width: 70%; */
 }
-
+.json_container {
+    padding-left:5vw;
+}
 .character_container {
     /* width: 50%; */
 }
-
+.customContainer {
+    margin-left: 15vw;
+    /* margin: 0 auto; */
+    display: flex;
+}
 button {
     margin:.5vh;
     padding:2vh;
@@ -34,4 +40,7 @@ button {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+}
+.padding-left-small {
+    padding-left: 2vw;
 }

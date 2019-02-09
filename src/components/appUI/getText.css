@@ -1,0 +1,30 @@
+.getText {
+    display: flex;
+}
+
+/* https://materializecss.com/text-inputs.html */
+/* label focus color */
+.input-field input:focus + label {
+    color: black !important;
+    /* border-bottom: 1px solid red !important; */
+  }
+  #icon_prefix {
+    /* border-bottom: 1px solid red !important; */
+    /* box-shadow: 0 1px 0 0 red !important */
+  }
+  .active {
+      color: black !important;
+  }
+  
+.validate{
+    /* border-bottom: red !important; */
+    /* border-bottom: 1px solid red !important; */
+}
+  /* label underline focus color */
+  .row .input-field input:focus {
+    border-bottom: 1px solid black !important;
+    box-shadow: 0 1px 0 0 black !important
+}
+input[type=text]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 1px solid black !important;
+}
