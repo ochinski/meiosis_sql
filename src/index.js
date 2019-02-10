@@ -151,10 +151,10 @@ var app = {
 
 		return (<div className="customContainer">
 			<div className="wrapper">
-			
+				
 				<div className="character_container">
 				<h1 className="orange-text">hi, i am here for you.</h1>
-					{Characters}
+					<Character state={state} actions={actions}/>
 				</div>
 				<div className="json_container">
 				<h1 className="blue-text">to send</h1>

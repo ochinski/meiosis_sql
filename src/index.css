@@ -44,3 +44,16 @@ button {
 .padding-left-small {
     padding-left: 2vw;
 }
+.wrapper-even {
+    display:flex;
+}
+.content-between {
+    display: flex;
+    justify-content: space-between
+}
+.full-width {
+    width:100%;
+}
+span {
+    margin: auto 0;
+}
